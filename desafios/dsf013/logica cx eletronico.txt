@@ -1,0 +1,27 @@
+<?php
+$saque= 1255;
+$sobra = $saque;
+$notas_200 = (int)($sobra / 200);
+$sobra = $sobra % 200;
+$notas_100 = (int)($sobra / 100);
+$sobra = $sobra % 100;
+$notas_50 = (int)($sobra / 50);
+$sobra = $sobra % 50;
+$notas_10 =(int)($sobra / 10);
+$sobra = $sobra % 10;
+$notas_5 = (int)($sobra / 5);
+
+echo "notas de R$ 200,00: " . " $notas_200\n";
+echo "notas de R$ 100,00: "." $notas_100\n";
+echo "notas de R$  50,00  " . " $notas_50\n";
+echo "notas de R$  10,00  ". " $notas_10\n";
+echo "notas de R$   5,00  ". " $notas_5";
+     <ul>
+            <li><img src="notas/200.png" alt=""> =  <?=$notas_200?></li>
+            <li><img src="notas/100.png" alt=""> =  <?=$notas_100?></li>
+            <li><img src="notas/50.png" alt=""> =  <?=$notas_50?></li>
+            <li><img src="notas/20.png" alt=""> =  <?=$notas_20?></li>
+            <li><img src="notas/10.png" alt=""> =  <?=$notas_10?></li>
+            <li><img src="notas/t5.png" alt=""> =  <?=$notas_5?></li>
+
+        </ul> 

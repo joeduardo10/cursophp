@@ -1,0 +1,61 @@
+1 minuto  = '60
+1 hora    = '3600         60 minutos
+1 dia     = '86.400       1440 minutos     24 horas   1 dia
+1 semana  = '604.800      10.080 minutos   168 horas  7 dias
+1 mes     = '2.592.000
+1 ano     = '31.536.000
+
+// meu algoritimo
+<?php
+const minuto =60;
+const hora = 3600;
+const dia = 86400;
+const semana = 604800;
+$totalsegundos = 2000000;
+$semana = intdiv($totalsegundos,semana);
+$dia = ($totalsegundos % semana);
+$hora = ($dia % dia);
+$minuto = ($hora % hora);
+$segundos = ($minuto % minuto);
+$dia = intdiv($dia,dia);
+$hora = intdiv($hora,hora);
+$minuto = intdiv($minuto,minuto);
+echo  $totalsegundos ." segundos tem: ". $semana ." semanas " . $dia . " dias ".
+$hora. " horas ". $minuto. " minutos " . $segundos. " Segundos";
+///////
+
+<?php
+$totalsegundos = 2000000;
+$semana = intdiv($totalsegundos,604800);
+$dia = ($totalsegundos % 604800);
+$hora = ($dia % 86400);
+$minuto = ($hora % 3600);
+$segundos = ($minuto % 60);
+$dia = intdiv($dia,86400);
+$hora = intdiv($hora,3600);
+$minuto = intdiv($minuto,60);
+echo  $totalsegundos ." segundos tem: ". $semana ." semanas " . $dia . " dias ".
+$hora. " horas ". $minuto. " minutos " . $segundos. " Segundos";
+
+//Algoritimo Guanabara
+
+<?php
+$total = 2_000_000;
+$sobra = $total;
+// Semana
+$semanas = (int)($sobra / 604800);
+$sobra = $sobra % 604800;
+// total de dias
+$dias = (int)($sobra / 86400);
+$sobra = $sobra % 86400;
+// Total de horas
+$horas = (int)($sobra / 3600);
+$sobra = $sobra % 3600;
+// total de minutos
+$minutos = (int)($sobra / 60);
+$sobra = $sobra % 60;
+// segundos
+$segundos = $sobra % 60;
+echo $total . " Segundos tem: " . $semanas . " Semanas ".
+$dias . " dias ". $horas. " horas " . $minutos . " minutos ".
+$sobra. " segundos ";
